@@ -1,0 +1,21 @@
+﻿<Window x:Name="frmScoreMain" x:Class="VisualMathQuiz.Score"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Quiz Results" Height="300" Width="300" Icon="zappa_smurf.ico" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="frmScore" Background="#FFD6D6D6">
+        <Menu x:Name="menuMain" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="385">
+            <MenuItem x:Name="menuFile" Header="File" FontSize="20" FontFamily="Snap ITC">
+                <MenuItem x:Name="menuClose" Header="Close..." IsCheckable="True" Click="menuClose_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="menuAbout" Header="About..." FontSize="20" FontFamily="Snap ITC" Click="menuAbout_Click"/>
+        </Menu>
+        <Label x:Name="lblCorAns" Content="Correct Answers:" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14"/>
+        <Label x:Name="lblIncorAns" Content="Incorrect Answers:" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14"/>
+        <Label x:Name="lblNumCorAns" Content="0" HorizontalAlignment="Left" Margin="223,50,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14" RenderTransformOrigin="2.942,0.319"/>
+        <Label x:Name="lblNumScore" Content="0" HorizontalAlignment="Left" Margin="223,104,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14" RenderTransformOrigin="-1.617,3.216"/>
+        <Label x:Name="lblScore" Content="Score:" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14"/>
+        <Label x:Name="lblNumIncCor" Content="0" HorizontalAlignment="Left" Margin="223,77,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14" RenderTransformOrigin="-1.617,3.216"/>
+        <Label x:Name="lblComment" Content="Sample Text" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top" Height="29" Width="272" FontFamily="Stencil" FontSize="16"/>
+        <Button x:Name="btnOk" Content="OK" HorizontalAlignment="Left" Margin="106,223,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" Click="btnOk_Click"/>
+    </Grid>
+</Window>

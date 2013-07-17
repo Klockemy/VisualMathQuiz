@@ -1,0 +1,19 @@
+﻿<Window x:Name="frmMain" x:Class="VisualMathQuiz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Visual Math Quiz" Height="350" Width="525" Icon="zappa_smurf.ico" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="frmBody" Background="#FFD6D6D6">
+        <Menu x:Name="menuMain" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="519">
+            <MenuItem x:Name="menuFile" Header="File" FontSize="20" FontFamily="Snap ITC">
+                <MenuItem x:Name="menuExit" Header="Exit..." IsCheckable="True" Click="menuExit_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="menuAbout" Header="About..." FontSize="20" FontFamily="Snap ITC" Click="menuAbout_Click"/>
+        </Menu>
+        <Label x:Name="lblWelcome" Content="Welcome to the Visual Math Quiz!" HorizontalAlignment="Left" Margin="36,52,0,0" VerticalAlignment="Top" Height="37" Width="451" FontSize="25" FontFamily="Stencil"/>
+        <Label x:Name="lblSubWelcome" Content="What function would you like to be quizzed on?" HorizontalAlignment="Left" Margin="53,94,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Stencil"/>
+        <Button x:Name="btnAddition" Content="Addition" HorizontalAlignment="Left" Margin="78,165,0,0" VerticalAlignment="Top" Width="115" FontFamily="Stencil" Height="47" Click="btnAddition_Click"/>
+        <Button x:Name="btnSubtraction" Content="Subtraction" HorizontalAlignment="Left" Margin="321,165,0,0" VerticalAlignment="Top" Width="115" FontFamily="Stencil" Height="47" Click="btnSubtraction_Click"/>
+        <Button x:Name="btnMultiply" Content="Multiplication" HorizontalAlignment="Left" Margin="78,238,0,0" VerticalAlignment="Top" Width="115" Height="47" FontFamily="Stencil" Click="btnMultiply_Click"/>
+        <Button x:Name="btnDivision" Content="Division" HorizontalAlignment="Left" Margin="321,238,0,0" VerticalAlignment="Top" Width="115" Height="47" FontFamily="Stencil" Click="btnDivision_Click"/>
+    </Grid>
+</Window>

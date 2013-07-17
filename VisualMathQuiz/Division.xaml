@@ -1,0 +1,32 @@
+﻿<Window x:Name="frmDiv" x:Class="VisualMathQuiz.Division"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Division" Height="371.875" Width="394.792" WindowStartupLocation="CenterScreen" Icon="zappa_smurf.ico">
+    <Grid x:Name="frmDivBody" Background="#FFD6D6D6">
+        <Menu x:Name="menuMain" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="519">
+            <MenuItem x:Name="menuFile" Header="File" FontSize="20" FontFamily="Snap ITC">
+                <MenuItem x:Name="menuClose" Header="Close..." IsCheckable="True" Click="menuClose_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="menuAbout" Header="About..." FontSize="20" FontFamily="Snap ITC" Click="menuAbout_Click"/>
+        </Menu>
+        <Label x:Name="lblDivNumQues" Content="How many questions do you want?" Margin="62,66,63,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14" HorizontalAlignment="Center"/>
+        <TextBox x:Name="txtbDivNum" HorizontalAlignment="Left" Height="23" Margin="125,98,0,0" TextWrapping="Wrap" Text="Enter Number..." VerticalAlignment="Top" Width="119" FontFamily="Stencil" MouseEnter="txtbDivNum_MouseEnter"/>
+        <Label x:Name="lblDivFactor" Content="What factor do you want your problems on?" Margin="22,177,19,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14" HorizontalAlignment="Center" Width="346"/>
+        <Button x:Name="btnDivTest" Content="Proceed to Test..." HorizontalAlignment="Left" Margin="111,299,0,0" VerticalAlignment="Top" Width="152" IsDefault="True" FontFamily="Stencil" Click="btnDivTest_Click"/>
+        <ComboBox x:Name="cmbDivFactor" HorizontalAlignment="Left" Margin="164,204,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="1.957,0.672">
+            <ComboBoxItem Content="1" FontFamily="Stencil" IsSelected="True"/>
+            <ComboBoxItem Content="2" FontFamily="Stencil"/>
+            <ComboBoxItem Content="3" FontFamily="Stencil"/>
+            <ComboBoxItem Content="4" FontFamily="Stencil"/>
+            <ComboBoxItem Content="5" FontFamily="Stencil"/>
+            <ComboBoxItem Content="6" FontFamily="Stencil"/>
+            <ComboBoxItem Content="7" FontFamily="Stencil"/>
+            <ComboBoxItem Content="8" FontFamily="Stencil"/>
+            <ComboBoxItem Content="9" FontFamily="Stencil"/>
+            <ComboBoxItem Content="10" FontFamily="Stencil"/>
+            <ComboBoxItem Content="11" FontFamily="Stencil"/>
+            <ComboBoxItem Content="12" FontFamily="Stencil"/>
+        </ComboBox>
+        
+    </Grid>
+</Window>

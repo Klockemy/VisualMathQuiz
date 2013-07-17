@@ -1,0 +1,22 @@
+﻿<Window x:Name="frmAddTest" x:Class="VisualMathQuiz.AddTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Addition Quiz" Height="384.375" Width="398.958" WindowStartupLocation="CenterScreen" Background="#FFD6D6D6" Icon="zappa_smurf.ico">
+    <Grid x:Name="frmAddTestBody" Margin="0,0,2,-20">
+        <Menu x:Name="menuMain" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="385">
+            <MenuItem x:Name="menuFile" Header="File" FontSize="20" FontFamily="Snap ITC">
+                <MenuItem x:Name="menuClose" Header="Close..." IsCheckable="True" Click="menuClose_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="menuAbout" Header="About..." FontSize="20" FontFamily="Snap ITC" Click="menuAbout_Click"/>
+        </Menu>
+        <Label x:Name="lblAddQues" Content="Question #" HorizontalAlignment="Left" Margin="25,59,0,0" VerticalAlignment="Top" FontFamily="Stencil"/>
+        <Label x:Name="lblAddQuesNum" Content="Number" HorizontalAlignment="Left" Margin="102,59,0,0" VerticalAlignment="Top" FontFamily="Stencil"/>
+        <Label x:Name="lblAddNum1" Content="Number1" HorizontalAlignment="Left" Margin="128,115,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="20"/>
+        <Label x:Name="lblAddNum2" Content="Number2" HorizontalAlignment="Left" Margin="128,164,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="20"/>
+        <Label x:Name="lblAddSign" Content="+" HorizontalAlignment="Left" Margin="102,164,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="20" RenderTransformOrigin="2.099,0.478"/>
+        <Separator x:Name="sepAdd" HorizontalAlignment="Left" Height="100" Margin="102,149,0,0" VerticalAlignment="Top" Width="129"/>
+        <TextBox x:Name="txtbAddAnswer" HorizontalAlignment="Left" Height="23" Margin="128,203,0,0" TextWrapping="Wrap" Text="Your Answer..." VerticalAlignment="Top" Width="87" MouseEnter="txtbAddAnswer_MouseEnter"/>
+        <Button x:Name="btnAddNext" Content="Next &gt;" HorizontalAlignment="Left" Margin="222,315,0,0" VerticalAlignment="Top" Width="75" FontFamily="Stencil" IsDefault="True" Click="btnAddNext_Click"/>
+        <Button x:Name="btnAddFinish" Content="Finished" HorizontalAlignment="Left" Margin="304,315,0,0" VerticalAlignment="Top" Width="75" FontFamily="Stencil" IsEnabled="False" Click="btnAddFinish_Click"/>
+    </Grid>
+</Window>

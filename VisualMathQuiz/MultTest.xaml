@@ -1,0 +1,22 @@
+﻿<Window x:Name="frmMultTest" x:Class="VisualMathQuiz.MultTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Multiplication Quiz" Height="384.375" Width="398.958" WindowStartupLocation="CenterScreen" Icon="zappa_smurf.ico">
+    <Grid x:Name="frmMultTestBody" Background="#FFD6D6D6">
+        <Menu x:Name="menuMain" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="519">
+            <MenuItem x:Name="menuFile" Header="File" FontSize="20" FontFamily="Snap ITC">
+                <MenuItem x:Name="menuClose" Header="Close..." IsCheckable="True" Click="menuClose_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="menuAbout" Header="About..." FontSize="20" FontFamily="Snap ITC" Click="menuAbout_Click"/>
+        </Menu>
+        <Label x:Name="lblMultQues" Content="Question #" HorizontalAlignment="Left" Margin="25,59,0,0" VerticalAlignment="Top" FontFamily="Stencil"/>
+        <Label x:Name="lblMultQuesNum" Content="Number" HorizontalAlignment="Left" Margin="102,59,0,0" VerticalAlignment="Top" FontFamily="Stencil"/>
+        <Label x:Name="lblMultNum1" Content="Number1" HorizontalAlignment="Left" Margin="128,115,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="20"/>
+        <Label x:Name="lblMultNum2" Content="Number2" HorizontalAlignment="Left" Margin="128,164,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="20"/>
+        <Label x:Name="lblMultSign" Content="x" HorizontalAlignment="Left" Margin="102,164,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="20" RenderTransformOrigin="2.099,0.478"/>
+        <Separator x:Name="sepMult" HorizontalAlignment="Left" Height="100" Margin="102,149,0,0" VerticalAlignment="Top" Width="129"/>
+        <TextBox x:Name="txtbMultAnswer" HorizontalAlignment="Left" Height="23" Margin="128,203,0,0" TextWrapping="Wrap" Text="Your Answer..." VerticalAlignment="Top" Width="87" MouseEnter="txtbMultAnswer_MouseEnter"/>
+        <Button x:Name="btnMultNext" Content="Next &gt;" HorizontalAlignment="Left" Margin="222,315,0,0" VerticalAlignment="Top" Width="75" FontFamily="Stencil" IsDefault="True" Click="btnMultNext_Click"/>
+        <Button x:Name="btnMultFinish" Content="Finished" HorizontalAlignment="Left" Margin="304,315,0,0" VerticalAlignment="Top" Width="75" FontFamily="Stencil" IsEnabled="False" Click="btnMultFinish_Click"/>
+    </Grid>
+</Window>
