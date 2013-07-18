@@ -24,6 +24,8 @@ namespace VisualMathQuiz
         public Subtraction()
         {
             InitializeComponent();
+            MainWindow.correct = 0;
+            MainWindow.incorrect = 0;
         }
 
     private void menuClose_Click(object sender, RoutedEventArgs e)
@@ -48,22 +50,29 @@ namespace VisualMathQuiz
 
         private void btnAddTest_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.numberQuestions = Convert.ToInt32(txtbNumSub.Text);
-            if ((string)cmbSubBigProblems.SelectionBoxItem == "Ones")
+            try
             {
-                subFactor = 10;
+                MainWindow.numberQuestions = Convert.ToInt32(txtbNumSub.Text);
+                if ((string)cmbSubBigProblems.SelectionBoxItem == "Ones")
+                {
+                    subFactor = 10;
+                }
+                else if ((string)cmbSubBigProblems.SelectionBoxItem == "Tens")
+                {
+                    subFactor = 100;
+                }
+                else if ((string)cmbSubBigProblems.SelectionBoxItem == "Hundreds")
+                {
+                    subFactor = 1000;
+                } // end if
+                this.Close();
+                SubTest newSubTest = new SubTest();
+                newSubTest.Show();
             }
-            else if ((string)cmbSubBigProblems.SelectionBoxItem == "Tens")
+            catch (FormatException)
             {
-                subFactor = 100;
-            }
-            else if ((string)cmbSubBigProblems.SelectionBoxItem == "Hundreds")
-            {
-                subFactor = 1000;
-            } // end if
-            this.Close();
-            SubTest newSubTest = new SubTest();
-            newSubTest.Show();
+                MessageBox.Show("Please use only numbers.");
+            } // end catch
         }
     }
 }

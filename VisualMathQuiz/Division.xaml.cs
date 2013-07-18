@@ -24,6 +24,8 @@ namespace VisualMathQuiz
         public Division()
         {
             InitializeComponent();
+            MainWindow.correct = 0;
+            MainWindow.incorrect = 0;
         }
 
         private void menuClose_Click(object sender, RoutedEventArgs e)
@@ -39,10 +41,17 @@ namespace VisualMathQuiz
         private void btnDivTest_Click(object sender, RoutedEventArgs e)
         {
             divFactor = Convert.ToInt32(cmbDivFactor.SelectionBoxItem);
-            MainWindow.numberQuestions = Convert.ToInt32(txtbDivNum.Text);
-
-            DivTest newDivTest = new DivTest();
-            newDivTest.ShowDialog();
+            try
+            {
+                MainWindow.numberQuestions = Convert.ToInt32(txtbDivNum.Text);
+                DivTest newDivTest = new DivTest();
+                newDivTest.ShowDialog();
+                this.Close();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Please use only numbers.");
+            } // end catch
         }
 
         private void txtbDivNum_MouseEnter(object sender, MouseEventArgs e)

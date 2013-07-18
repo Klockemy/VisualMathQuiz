@@ -21,6 +21,7 @@ namespace VisualMathQuiz
     {
         public int multNumber1;
         public int multNumber2;
+        int check = 0;
         public double multNewRand1;
         public double multNewRand2;
         public double multNewAns;
@@ -82,18 +83,26 @@ namespace VisualMathQuiz
 
         private void btnMultNext_Click(object sender, RoutedEventArgs e)
         {
-            AddCheck();
-            if (MainWindow.i != (MainWindow.numberQuestions) + 1)
+            try
             {
-                MultNew();
+                check = Convert.ToInt32(txtbMultAnswer.Text);
+                AddCheck();
+                if (MainWindow.i != (MainWindow.numberQuestions) + 1)
+                {
+                    MultNew();
+                } // end if
             }
+            catch (FormatException)
+            {
+                MessageBox.Show("Please use only numbers.");
+            } // end catch
         }
 
         private void btnMultFinish_Click(object sender, RoutedEventArgs e)
         {
             Score frmScore = new Score();
-            this.Close();
             frmScore.Show();
+            this.Close();
         }
     }
 }

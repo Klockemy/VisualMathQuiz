@@ -10,7 +10,7 @@
             <MenuItem x:Name="menuAbout" Header="About..." FontSize="20" FontFamily="Snap ITC" Click="menuAbout_Click"/>
         </Menu>
         <Label x:Name="lblDivNumQues" Content="How many questions do you want?" Margin="62,66,63,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14" HorizontalAlignment="Center"/>
-        <TextBox x:Name="txtbDivNum" HorizontalAlignment="Left" Height="23" Margin="125,98,0,0" TextWrapping="Wrap" Text="Enter Number..." VerticalAlignment="Top" Width="119" FontFamily="Stencil" MouseEnter="txtbDivNum_MouseEnter"/>
+        <TextBox x:Name="txtbDivNum" HorizontalAlignment="Left" Height="23" Margin="125,98,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="119" FontFamily="Stencil" MouseEnter="txtbDivNum_MouseEnter"/>
         <Label x:Name="lblDivFactor" Content="What factor do you want your problems on?" Margin="22,177,19,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14" HorizontalAlignment="Center" Width="346"/>
         <Button x:Name="btnDivTest" Content="Proceed to Test..." HorizontalAlignment="Left" Margin="111,299,0,0" VerticalAlignment="Top" Width="152" IsDefault="True" FontFamily="Stencil" Click="btnDivTest_Click"/>
         <ComboBox x:Name="cmbDivFactor" HorizontalAlignment="Left" Margin="164,204,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="1.957,0.672">

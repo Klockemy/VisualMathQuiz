@@ -21,6 +21,7 @@ namespace VisualMathQuiz
     {
         public int divNumber1;
         public int divNumber2;
+        int check = 0;
         public double divNewRand1;
         public double divNewRand2;
         public double divNewRand3;
@@ -79,11 +80,19 @@ namespace VisualMathQuiz
 
         private void btnDivNext_Click(object sender, RoutedEventArgs e)
         {
-            DivCheck();
-            if (MainWindow.i != (MainWindow.numberQuestions)+1)
+            try
             {
-                DivNew();
+                check = Convert.ToInt32(txtbDivAnswer.Text);
+                DivCheck();
+                if (MainWindow.i != (MainWindow.numberQuestions) + 1)
+                {
+                    DivNew();
+                }
             }
+            catch (FormatException)
+            {
+                MessageBox.Show("Please only use numbers.");
+            } // end catch
         }
 
         private void txtbDivAnswer_MouseEnter(object sender, MouseEventArgs e)
@@ -93,8 +102,8 @@ namespace VisualMathQuiz
 
         private void btnDivFinish_Click(object sender, RoutedEventArgs e)
         {
-            Score frmScore = new Score();
             this.Close();
+            Score frmScore = new Score();
             frmScore.Show();
         }
     }

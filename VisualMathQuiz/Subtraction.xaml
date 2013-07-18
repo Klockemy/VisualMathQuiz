@@ -10,7 +10,7 @@
                 <MenuItem x:Name="menuAbout" Header="About..." FontSize="20" FontFamily="Snap ITC" Click="menuAbout_Click"/>
             </Menu>
         <Label x:Name="lblSubNumQues" Content="How many questions do you want?" Margin="62,66,63,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14" HorizontalAlignment="Center"/>
-        <TextBox x:Name="txtbNumSub" HorizontalAlignment="Left" Height="23" Margin="125,98,0,0" TextWrapping="Wrap" Text="Enter Number..." VerticalAlignment="Top" Width="119" FontFamily="Stencil" MouseEnter="txtbNumAdd_MouseEnter"/>
+        <TextBox x:Name="txtbNumSub" HorizontalAlignment="Left" Height="23" Margin="125,98,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="119" FontFamily="Stencil" MouseEnter="txtbNumAdd_MouseEnter"/>
         <ComboBox x:Name="cmbSubBigProblems" HorizontalAlignment="Left" Margin="111,218,0,0" VerticalAlignment="Top" Width="152" Height="28" SelectionChanged="cmbAddBigProblems_SelectionChanged" FontFamily="Stencil">
             <ComboBoxItem Content="Ones" FontFamily="Stencil" IsSelected="True"/>
             <ComboBoxItem Content="Tens" FontFamily="Stencil"/>

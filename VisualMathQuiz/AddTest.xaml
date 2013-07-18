@@ -15,7 +15,7 @@
         <Label x:Name="lblAddNum2" Content="Number2" HorizontalAlignment="Left" Margin="128,164,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="20"/>
         <Label x:Name="lblAddSign" Content="+" HorizontalAlignment="Left" Margin="102,164,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="20" RenderTransformOrigin="2.099,0.478"/>
         <Separator x:Name="sepAdd" HorizontalAlignment="Left" Height="100" Margin="102,149,0,0" VerticalAlignment="Top" Width="129"/>
-        <TextBox x:Name="txtbAddAnswer" HorizontalAlignment="Left" Height="23" Margin="128,203,0,0" TextWrapping="Wrap" Text="Your Answer..." VerticalAlignment="Top" Width="87" MouseEnter="txtbAddAnswer_MouseEnter"/>
+        <TextBox x:Name="txtbAddAnswer" HorizontalAlignment="Left" Height="23" Margin="128,203,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="87" MouseEnter="txtbAddAnswer_MouseEnter"/>
         <Button x:Name="btnAddNext" Content="Next &gt;" HorizontalAlignment="Left" Margin="222,315,0,0" VerticalAlignment="Top" Width="75" FontFamily="Stencil" IsDefault="True" Click="btnAddNext_Click"/>
         <Button x:Name="btnAddFinish" Content="Finished" HorizontalAlignment="Left" Margin="304,315,0,0" VerticalAlignment="Top" Width="75" FontFamily="Stencil" IsEnabled="False" Click="btnAddFinish_Click"/>
     </Grid>

@@ -24,6 +24,8 @@ namespace VisualMathQuiz
         public Multiplication()
         {
             InitializeComponent();
+            MainWindow.correct = 0;
+            MainWindow.incorrect = 0;
         }
 
         private void menuClose_Click(object sender, RoutedEventArgs e)
@@ -39,10 +41,19 @@ namespace VisualMathQuiz
         private void btnMultTest_Click(object sender, RoutedEventArgs e)
         {
             multFactor = Convert.ToInt32(cmbMultFactor.SelectionBoxItem);
-            MainWindow.numberQuestions = Convert.ToInt32(txtbMultNum.Text);
+            try
+            {
+                MainWindow.numberQuestions = Convert.ToInt32(txtbMultNum.Text);
+                MultTest newMultTest = new MultTest();
+                newMultTest.ShowDialog();
+                this.Close();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Please use only numbers.");
+            }
 
-            MultTest newMultTest = new MultTest();
-            newMultTest.ShowDialog();
+            
         }
 
         private void txtbMultNum_MouseEnter(object sender, MouseEventArgs e)

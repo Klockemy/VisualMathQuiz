@@ -21,6 +21,7 @@ namespace VisualMathQuiz
     {
         public int addNumber1;
         public int addNumber2;
+        int check;
         public double addNewRand1;
         public double addNewRand2;
         public double addNewAns;
@@ -77,11 +78,19 @@ namespace VisualMathQuiz
 
         private void btnAddNext_Click(object sender, RoutedEventArgs e)
         {
-            AddCheck();
+            try
+            {
+                check = Convert.ToInt32(txtbAddAnswer.Text);
+                AddCheck();
             if (MainWindow.i != (MainWindow.numberQuestions)+1)
             {
                 AddNew();
-            }
+            } // end if
+            } // end try
+            catch (FormatException)
+            {
+                MessageBox.Show("Please use only numbers.");
+            } // end catch
         }
 
         private void txtbAddAnswer_MouseEnter(object sender, MouseEventArgs e)
@@ -91,8 +100,8 @@ namespace VisualMathQuiz
 
         private void btnAddFinish_Click(object sender, RoutedEventArgs e)
         {
-            Score frmScore = new Score();
             this.Close();
+            Score frmScore = new Score();
             frmScore.Show();
         }
     }
